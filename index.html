@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provjera dijabetesa</title>
+    <script src="/scripts/script.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <h1>Dijabetes</h1>
+    <p class="uvod"></p>
+    
+    <section class="diabetes-types">
+        <h2>Tipovi dijabetesa</h2>
+
+        <details class="type-detail">
+            <summary>Tip 1</summary>
+            <div class="detail-content">
+                <p>Dijabetes tip 1 nastaje autoimunom destrukcijom beta ćelija gušterače, što dovodi do nedostatka insulina. 
+                    Javlja se uglavnom prije 30. godine života i zahtijeva doživotnu insulinsku terapiju. Simptomi uključuju pojačano žeđanje, mokrenje i gubitak težine.</p>
+            </div>
+        </details>
+
+        <details class="type-detail">
+            <summary>Tip 2</summary>
+            <div class="detail-content">
+                <p>Tip 2 dijabetesa je najčešći oblik (90% slučajeva) i povezan je s inzulinskom rezistencijom i najčešće se javlja u odraslih (nakon 40. godine) , ali se pojavljuje i kod mlađih osoba. 
+                    Povezan je s pretilošću i lošom prehranom. Liječenje uključuje promjene životnog stila, lijekove i ponekad inzulin.</p>
+            </div>
+        </details>
+
+        <details class="type-detail">
+            <summary>Gestacijski dijabetes</summary>
+            <div class="detail-content">
+                <p>Gestacijski dijabetes javlja se tijekom trudnoće zbog hormonskih promjena koje uzrokuju rezistenciju na inzulin i obično nestane nakon poroda, ali povećava rizik 
+                    od razvoja dijabetesa tipa 2 u budućnosti.</p>
+            </div>
+        </details>
+    </section>
+
+    <h2> Provjera rizika od dijabetesa</h2>
+
+    <form id="diabetesForm">
+        <label>Spol:</label>
+        <select name="gender" required>
+            <option value="0">Žensko</option>
+            <option value="1">Muško</option>
+        </select>
+
+        <label>Dob:</label>
+        <input type="number" name="age" min="0" max="120" required>
+
+        <label>Hipertenzija:</label>
+        <select name="hypertension" required>
+            <option value="0">Ne</option>
+            <option value="1">Da</option>
+        </select>
+
+        <label>Bolest srca:</label>
+        <select name="heart_disease" required>
+            <option value="0">Ne</option>
+            <option value="1">Da</option>
+        </select>
+
+        <label>BMI (kg/m2):</label>
+        <input type="number" step="0.1" min="10" max="100" name="bmi" required>
+
+        <label>HbA1c razina:</label>
+        <input type="number" step="0.1" min="3.5" max="9" name="HbA1c_level" required>
+
+        <label>Glukoza u krvi (mg/dL):</label>
+        <input type="number" min="50" max="300" name="blood_glucose_level" required>
+
+        <label>Povijest pušenja:</label>
+        <select name="smoking_history" required>
+            <option value="No Info">Nema informacija</option>
+            <option value="current">Trenutno pušim</option>
+            <option value="ever">Pušio sam nekad</option>
+            <option value="former">Bivši pušač</option>
+            <option value="never">Nikad nisam pušio</option>
+            <option value="not current">Ne pušim trenutno</option>
+        </select>
+
+        <button type="submit"> Provjeri rizik</button>
+    </form>    
+    <p style="font-size: 12px; color: #666; margin-top: 5px;"> Napomena: Ovo nije medicinska dijagnoza!</p>
+    <p id="result"></p>
+
+
+
+    <h1> Analiza skupa podataka</h1>
+    <p>Za izradu ovog modela za predviđanje rizika od dijabetesa koristio se skup podataka koji sadrži 100 000 primjeraka o pacijentima. </p>
+
+    <p>Skup podataka za predviđanje dijabetesa je zbirka medicinskih i demografskih podataka pacijenata, zajedno s njihovim statusom dijabetesa (pozitivnim ili negativnim).
+       Podaci uključuju značajke kao što su dob, spol, indeks tjelesne mase (BMI), hipertenzija, bolesti srca, povijest pušenja, razina HbA1c i razina glukoze u krvi.</p>
+
+    <p>Prikaz distribucije dijabetesa u skupu podataka.</p>
+    <img src="images/DistributionOfDiabetes.png" alt="Distribucija dijabetesa slika"><br>
+
+
+    <p>Spol se odnosi na biološki spol pojedinca, što može utjecati na njegovu sklonost dijabetesu. Slika prikazuje distribuciju spola među pacijentima s dijabetesom,
+         što može pomoći u razumijevanju kako dijabetes utječe na različite spolove.</p>
+    <img src="images/GenderDistribution.png" alt="Distribucija spola u pacijentima s dijabetesom slika"><br>    
+
+    <p>Dob je važan faktor jer se dijabetes češće dijagnosticira kod starijih osoba. Prikaz distribucije dobi pacijenata u skupu podataka, što može pomoći u 
+        razumijevanju demografskih čimbenika povezanih s dijabetesom.</p>
+    <img src="images/AgeDistribution.png" alt="Distribucija dobi slika"><br>
+
+    <p>Razina glukoze u krvi odnosi se na količinu glukoze u krvotoku u određenom trenutku. Visoke razine glukoze u krvi ključni su pokazatelj dijabetesa.
+        Slika prikazuje distribuciju razina glukoze u krvi među pacijentima.</p>
+    <img src="images/DistributionOfBloodGlucose.png" alt="Distribucija glukoze u krvi slika"><br>
+    
+    <p>BMI (indeks tjelesne mase) je mjera tjelesne masti na temelju težine i visine. Više vrijednosti BMI-a povezane su s većim rizikom od dijabetesa. 
+        Raspon BMI-a u skupu podataka je od 10,16 do 71,55. BMI manji od 18,5 je pothranjenost, 18,5-24,9 je normalna težina, 25-29,9 je prekomjerna težina,
+         a 30 ili više je pretilost. Slika prikazuje distribuciju indeksa tjelesne mase (BMI) među pacijentima s dijabetesom, ističući povezanost
+        između prekomjerne težine i rizika od dijabetesa.</p>
+    <img src="images/BMIDistribution.png" alt="Distribucija BMI u pacijentima s dijabetesom slika"><br>
+    
+    <p>Razina HbA1c (hemoglobina A1c) mjera je prosječne razine šećera u krvi osobe tijekom posljednja 2-3 mjeseca. Više razine ukazuju na veći rizik od razvoja dijabetesa.
+         Uglavnom više od 6,5% razine HbA1c ukazuje na dijabetes. Slika prikazuje distribuciju razina HbA1c među pacijentima s dijabetesom.</p>
+    <img src="images/HbA1cLevelDistribution.png" alt="Distribucija HbA1c razina u pacijentima s dijabetesom slika"><br>
+
+    
+    <p>Hipertenzija je medicinsko stanje u kojem je krvni tlak u arterijama trajno povišen. Slika prikazuje distribuciju hipertenzije među pacijentima s dijabetesom,
+         naglašavajući važnost upravljanja krvnim tlakom u ovoj populaciji.</p>
+    <img src="images/HypertensionDistributionInDiabeticPatients.png" alt="Distribucija hipertenzije u pacijentima s dijabetesom slika"><br> 
+
+
+    <p> Bolest srca je još jedno medicinsko stanje koje je povezano s povećanim rizikom od razvoja dijabetesa. Slika prikazuje distribuciju bolesti srca među pacijentima s dijabetesom,
+         što ukazuje na povezanost između dijabetesa i kardiovaskularnih bolesti.</p>
+    <img src="images/HeartDisease.png" alt="Distribucija bolesti srca u pacijentima s dijabetesom slika"><br> 
+
+
+    <p> Povijest pušenja također se smatra faktorom rizika za dijabetes i može pogoršati komplikacije povezane s dijabetesom. U skupu podataka ima 6 kategorija: trenutni pušač, bivši pušač, trenutno ne pušač,
+         nikada, ikada i ne zna se. Slika prikazuje distribuciju povijesti pušenja među pacijentima s dijabetesom, ističući utjecaj pušenja na rizik  od razvoja dijabetesa.</p>
+    <img src="images/SmokingHistory.png" alt="Distribucija povijesti pušenja u pacijentima s dijabetesom slika"><br>
+
+</body>
+
+</html>
