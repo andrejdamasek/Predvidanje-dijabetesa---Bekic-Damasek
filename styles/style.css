@@ -15,14 +15,14 @@ form {
 
 label {
     display: block;
-    margin: 10px 0 5px;
+    margin: 5px 0 5px;
     font-weight: bold;
 }
 
 input {
     width: 96.5%;
     padding: 10px;
-    margin-bottom: 15px;    
+    margin-bottom: 10px;    
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: larger;
