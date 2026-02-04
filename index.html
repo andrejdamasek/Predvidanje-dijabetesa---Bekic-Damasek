@@ -53,7 +53,15 @@
         <label>Dob:</label>
         <input type="number" name="age" min="0" max="120" required>
 
-        <label>Hipertenzija:</label>
+        <label>Hipertenzija:
+            <span class="tooltip">
+                <i class="tooltip-icon">ⓘ</i>
+                <span class="tooltip-text">
+                    Hipertenzija je medicinsko stanje u kojem je krvni tlak u arterijama trajno povišen.<br>
+                </span>
+            </span></label>
+
+        </label>
         <select name="hypertension" required>
             <option value="0">Ne</option>
             <option value="1">Da</option>
@@ -65,13 +73,45 @@
             <option value="1">Da</option>
         </select>
 
-        <label>BMI (kg/m2):</label>
+        <label>BMI (kg/m2):
+            <span class="tooltip">
+                <i class="tooltip-icon">ⓘ</i>
+                <span class="tooltip-text">                    
+                    BMI je mjera tjelesne mase na temelju težine i visine. Računa se kao visina/(masa*masa).
+                     Mjera kao indikacija za razvoj šećerne bolesti tipa 2, povišenog krvnog tlaka i kardiovaskularnih bolesti.<br><br>
+                    <strong>&lt;18.5%:</strong> Pothranjenost<br>
+                    <strong>18.5-24.9%:</strong> Normalna težina<br>
+                    <strong>25-29.9%:</strong> Prekomjerna težina<br>
+                    <strong>&gt;30%:</strong> Pretilost
+                </span>
+            </span></label>
+        </label>
         <input type="number" step="0.1" min="10" max="100" name="bmi" required>
 
-        <label>HbA1c razina:</label>
+        <label>HbA1c razina:
+            <span class="tooltip">
+                <i class="tooltip-icon">ⓘ</i>
+                <span class="tooltip-text">
+                    Prosječna razina šećera u krvi tijekom 2-3 mjeseca.<br><br>
+                    <strong>&lt;5.7%:</strong> Normalno<br>
+                    <strong>5.7-6.4%:</strong> Predijabetes<br>
+                    <strong>&gt;6.5%:</strong> Najčešće ukazuje na postojanje dijabetesa
+                </span>
+            </span></label>
         <input type="number" step="0.1" min="3.5" max="9" name="HbA1c_level" required>
 
-        <label>Glukoza u krvi (mg/dL):</label>
+        <label>Glukoza u krvi (mg/dL):
+            <span class="tooltip">
+                <i class="tooltip-icon">ⓘ</i>
+                <span class="tooltip-text">
+                    Glukoza u krvi je razina šećera u krvi u određenom trenutku. Mjeri se u mg/dL, a sve vrijednosti se odnose na razinu glukoze natašte (8+ sati posta).<br><br>
+                    
+                    <strong>70-100:</strong> Normalno<br>
+                    <strong>100-125:</strong> Predijabetes<br>
+                    <strong>&gt;125:</strong> Najčešće ukazuje na postojanje dijabetes
+                </span>
+            </span></label>
+        </label>
         <input type="number" min="50" max="300" name="blood_glucose_level" required>
 
         <label>Povijest pušenja:</label>
