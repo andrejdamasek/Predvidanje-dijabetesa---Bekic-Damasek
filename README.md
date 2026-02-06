@@ -1,6 +1,6 @@
-# Projekt iz kolegija Računarstvo usluga i analiza podataka
+# Predviđanje dijabetesa
 
-# Naziv projekta: Predviđanje dijabetesa
+## Projekt iz kolegija Računarstvo usluga i analiza podataka
 
 Cilj projekta bio je izraditi odabrati dobar skup podataka, odabrati dobre značajke, napraviti analizu podataka, napraviti i
 deployati model pomoću Microsoft Azure platforme, te izraditi web stranicu koja će koristiti izrađeni model.
@@ -34,6 +34,19 @@ deployati model pomoću Microsoft Azure platforme, te izraditi web stranicu koja
 ## Seminar
 * Detaljna analiza podataka
 * Opis infrastrukture (Azure, REST API, Web stranica)
+
+## Instalacija
+
+1. Klonirajte repozitorij:
+   ```bash
+   git clone https://github.com/korisnik/diabetes-prediction.git
+   cd diabetes-prediction
+   npm install
+   node server.js
+
+2. Otvorite preglednik i idite na adresu koju ispisuje server:
+   
+    http://localhost:3000
 
 
 ## Autori
