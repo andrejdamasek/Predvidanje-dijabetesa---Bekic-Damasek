@@ -39,13 +39,19 @@ deployati model pomoću Microsoft Azure platforme, te izraditi web stranicu koja
 
 1. Klonirajte repozitorij:
    ```bash
-   git clone https://github.com/korisnik/diabetes-prediction.git
-   cd diabetes-prediction
+   git clone https://github.com/andrejdamasek/Predvidjanje-dijabetesa---Bekic-Damasek.git
+   
+2. Odlazak u direktorij
+ ```bash  
+   cd Predvidjanje-dijabetesa---Bekic-Damasek
+   
+ 3. Instalirajte i pokrenite Node.js
+ ```bash 
    npm install
    node server.js
 
-2. Otvorite preglednik i idite na adresu koju ispisuje server:
-   
+4. Otvorite preglednik i idite na adresu:
+   ```bash  
     http://localhost:3000
 
 
