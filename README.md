@@ -16,7 +16,8 @@ deployati model pomoću Microsoft Azure platforme, te izraditi web stranicu koja
 * Čišćenje i pripremu podataka
 * Istraživačku analizu podataka
 * Odabir relevantnih značajki i modela za binarnu klasifikaciju
-
+* Kaggle - https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset
+ 
 ## Izrada modela za predikciju dijabetesa
 * Azure AutoML korišten je za predodabir modela logističke regresije
 * Azure Designer korišten je za izradu modela logističke regresije
@@ -30,6 +31,11 @@ deployati model pomoću Microsoft Azure platforme, te izraditi web stranicu koja
 * Prikaz dodatnih informacija o tipovima dijabetesa
 * Prikaz podataka korištenih za izradu modela za predikciju dijabetesa
 
-# Seminar
+## Seminar
 * Detaljna analiza podataka
 * Opis infrastrukture (Azure, REST API, Web stranica)
+
+
+## Autori
+* Marinela Bekić
+* Andrej Damašek
